@@ -32,8 +32,41 @@ public class AlistamentoMilitar {
 		validacaoIdade(entrada);
 	}
 	
+	public void anoNascimento(String anoNascimento) {
+		this.alistamentoMilitar[0] = anoNascimento;
+	}
+	
+	public void nome(String nome) {
+		this.alistamentoMilitar[1] = nome;
+	}
+	
+	public void nomeDoPai(String nomeDoPai) {
+		this.alistamentoMilitar[2] = nomeDoPai;
+	}
+	
+	public void nomeDaMae(String nomeDaMae) {
+		this.alistamentoMilitar[3] = nomeDaMae;
+	}
+	
+	public void telefone(String telefone) {
+		this.alistamentoMilitar[4] = telefone;
+	}
+	
+	public void email(String email) {
+		this.alistamentoMilitar[5] = email;
+	}
+	
+	public void altura(String altura) {
+		this.alistamentoMilitar[6] = altura;
+	}
+	
+	public void peso(String peso) {
+		this.alistamentoMilitar[7] = peso;
+	}
+	
+	
 	public void validacaoIdade(Scanner entrada) {
-		if(anoNascimento >= 18 && anoNascimento <= 45) {
+		if(anoNascimento() >= 18 && anoNascimento() <= 45) {
 			cadastroRecruta(entrada);
 			exibirInformacoes();
 		}else {
@@ -44,31 +77,31 @@ public class AlistamentoMilitar {
 	public void cadastroRecruta(Scanner entrada) {
 		System.out.print("Informe seu Nome: ");
 		String nome = entrada.next();
-		setNome(nome);
+		nome(nome);
 		
 		System.out.print("Nome do Pai: ");
 		String nomeDoPai = entrada.next();
-		setNomeDoPai(nomeDoPai);
+		nomeDoPai(nomeDoPai);
 		
 		System.out.print("Nome da Mãe: ");
 		String nomeDaMae = entrada.next();
-		setNomeDaMae(nomeDaMae);
+		nomeDaMae(nomeDaMae);
 		
 		System.out.print("Telefone: ");
 		int telefone = entrada.nextInt();
-		setTelefone(telefone);
+		telefone(telefone);
 		
 		System.out.print("E-mail: ");
 		String email = entrada.next();
-		setEmail(email);
+		email(email);
 		
 		System.out.print("Altura: ");
 		double altura = entrada.nextDouble();
-		setAltura(altura);
+		altura(altura);
 		
 		System.out.print("Peso: ");
 		double peso = entrada.nextDouble();
-		setPeso(peso);
+		peso(peso);
 	}
 	
 	public void exibirInformacoes() {
